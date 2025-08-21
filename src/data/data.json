@@ -280,7 +280,9 @@
         "It was the first planet discovered by mathematical calculations before being observed."
       ],
       "geography": ""
-    },
+    }
+  ],
+  "dwarfPlanets": [
     {
       "id": "9",
       "name": "Pluto",
@@ -311,6 +313,81 @@
         "Its orbit is so tilted that sometimes it is closer to the Sun than Neptune."
       ],
       "geography": ""
+    },
+    {
+      "id": "10",
+      "name": "Haumea",
+      "type": "Dwarf Planet",
+      "resume": "Haumea is a rapidly rotating dwarf planet located in the Kuiper Belt. It is known for its elongated, egg-like shape and fast rotation period, making it unique among other dwarf planets.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/planets/haumea.svg",
+        "png": "https://api-solar-system.up.railway.app/files/planets/haumea.png"
+      },
+      "searchTags": ["haumea", "dwarf planet"],
+      "features": {
+        "Diameter": "about 1,632 km",
+        "sunDistance": "6,452,000,000 km",
+        "rotationDuration": "3.9 hours",
+        "gravity": "0.44 m/s²",
+        "orbitalPeriod": ["103,410 days", "283.3 years"]
+      },
+      "atmosphere": [],
+      "discovery": { "year": "2004", "by": "Mike Brown, Chad Trujillo, David Rabinowitz" },
+      "curiosities": [
+        "Haumea has a ring system, making it the first trans-Neptunian object discovered with rings.",
+        "It rotates so quickly that it is shaped like an ellipsoid rather than a sphere."
+      ],
+      "geography": "Haumea's surface is covered with crystalline water ice and it has two known moons: Hiʻiaka and Namaka."
+    },
+    {
+      "id": "11",
+      "name": "Makemake",
+      "type": "Dwarf Planet",
+      "resume": "Makemake is one of the largest known objects in the Kuiper Belt and is notable for being the second-brightest dwarf planet after Pluto. It is covered with methane, ethane, and possibly nitrogen ices.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/planets/makemake.svg",
+        "png": "https://api-solar-system.up.railway.app/files/planets/makemake.png"
+      },
+      "searchTags": ["makemake", "dwarf planet"],
+      "features": {
+        "Diameter": "about 1,430 km",
+        "sunDistance": "6,850,000,000 km",
+        "rotationDuration": "22.5 hours",
+        "gravity": "0.5 m/s²",
+        "orbitalPeriod": ["111,845 days", "306.2 years"]
+      },
+      "atmosphere": [],
+      "discovery": { "year": "2005", "by": "Mike Brown, Chad Trujillo, David Rabinowitz" },
+      "curiosities": [
+        "Makemake was discovered shortly after Easter and is named after the creator god of the Rapa Nui people of Easter Island.",
+        "It has one known moon, discovered in 2016."
+      ],
+      "geography": "Makemake's surface is very bright and covered with frozen methane and possibly nitrogen."
+    },
+    {
+      "id": "12",
+      "name": "Eris",
+      "type": "Dwarf Planet",
+      "resume": "Eris is the most massive known dwarf planet in the Solar System and is located in the scattered disk beyond the Kuiper Belt. Its discovery was a key factor in the reclassification of Pluto as a dwarf planet.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/planets/eris.svg",
+        "png": "https://api-solar-system.up.railway.app/files/planets/eris.png"
+      },
+      "searchTags": ["eris", "dwarf planet"],
+      "features": {
+        "Diameter": "2,326 km",
+        "sunDistance": "10,120,000,000 km",
+        "rotationDuration": "25.9 hours",
+        "gravity": "0.82 m/s²",
+        "orbitalPeriod": ["203,830 days", "558 years"]
+      },
+      "atmosphere": [],
+      "discovery": { "year": "2005", "by": "Mike Brown, Chad Trujillo, David Rabinowitz" },
+      "curiosities": [
+        "Eris has one known moon, Dysnomia.",
+        "It is sometimes farther from the Sun than any other known dwarf planet."
+      ],
+      "geography": "Eris is a distant, icy world with a highly elliptical orbit and a surface covered with methane ice."
     }
   ],
   "asteroids": [
