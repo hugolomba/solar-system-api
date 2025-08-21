@@ -2,7 +2,7 @@
   "name": "solar-system-api",
   "version": "1.0.0",
   "description": "API that provides information about Solar System objects.",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
