@@ -17,7 +17,9 @@ const handleRequestResponse = (req, res) => {
 }
 
 function normalizeInput(input) {
-  return input
+    if (!input) return ''
+    return input
+
     .normalize('NFD')              
     .replace(/[\u0300-\u036f]/g, '') 
     .replace(/\s+/g, '')             
@@ -39,6 +41,7 @@ routes.get("/", (req, res) => {
             "/planets": "List all planets.",
             "/planets/:id": "Get detailed information about a specific planet by its ID.",
             "/dwarf-planets": "List all dwarf planets.",
+            "/planets-and-dwarfs": "List all planets and dwarf planets",
             "/asteroids": "List all asteroids.",
             "/galaxies": "List all galaxies.",
             "/find/:string": "Search for objects containing the specified string in their tags."
@@ -58,34 +61,60 @@ routes.get("/planets", (req, res) => {
 
 // show detailed info about a planet by name
 routes.get("/planet{s}/:name", (req, res) => {
-    const { id } = req.params
-    let filtered = data.planets.filter((p) => p.name.toLowerCase() === id)
+    const { name } = req.params
+    let filtered = data.planets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
     res.json(filtered)
     console.log(req.params);
 })
 
 //show dwarf planets
+routes.get("/dwarf-planets", (req, res) => {
+   
+    res.json(data.dwarfPlanets)
+
+})
 
 // show detailed info about a dwarf planet by name
-
+routes.get("/dwarf-planet{s}/:name", (req, res) => {
+    const { name } = req.params
+    let filtered = data.dwarfPlanets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
+    res.json(filtered)
+})
 
 // show planets + dwarf planets in the same list
-
-
+routes.get("/planets-and-dwarfs", (req, res) => {
+    let mergedPlanetsAndDwarfPlanets = [...data.planets, ...data.dwarfPlanets]
+    res.json(mergedPlanetsAndDwarfPlanets)
+    
+})
 
 // show asteroids
+routes.get("/asteroids", (req, res) => {
+    res.json(data.asteroids)
+})
 
 // show galaxies
+routes.get("/galaxies", (req, res) => {
+    res.json(data.galaxies)
+})
 
 // /find/:string search for objects containing the specified string in their tags
+routes.get("/find/:tag", (req, res)=> {
+   const { tag } = req.params;
+    const normalizedTag = normalizeInput(tag);
+    const results = {};
 
+    for (const category in data) {
+        const filteredItems = data[category].filter(item =>
+            item.searchTags.some(t => normalizeInput(t).includes(normalizedTag))
+        );
 
-routes.get("/planets/:id", (req, res)=> {
-    console.log(req.params)
-    const { id } = req.params
-    console.log(id)
-    let filtered = data.planets.filter((p) => p.id === id)
-    res.json(filtered)
+        if (filteredItems.length > 0) {
+            results[category] = filteredItems;
+        }
+    }
+
+    res.json(results);
 })
 
 
