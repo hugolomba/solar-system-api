@@ -7,8 +7,8 @@
       "resume": "Our Sun is a 4.5 billion-year-old star – a hot, glowing ball of hydrogen and helium at the centre of our solar system. Without its energy, life as we know it could not exist here on our home planet. The Sun is the largest object in our solar system. About 1.3 million Earths would be needed to fill the Sun’s volume. Its gravity holds the solar system together, keeping everything from the largest planets to the smallest pieces of debris in orbit around it. The hottest part of the Sun is its core, where temperatures reach 15 million degrees Celsius. The Sun’s activity, from its powerful eruptions to the constant flow of charged particles it sends, influences the nature of space throughout the solar system.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/sun.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/sun.png"
+        "svg": "/files/images/planets/sun.svg",
+        "png": "/files/images/planets/sun.png"
       },
       "searchTags": ["planet", "sun", "central star"],
       "features": {
@@ -40,8 +40,8 @@
       "resume": "The smallest planet in our solar system and closest to the Sun, Mercury is only slightly larger than Earth’s Moon. From Mercury’s surface, the Sun would appear more than three times larger than when seen from Earth, and sunlight would be seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to neighbouring Venus, thanks to its dense atmosphere. Because of Mercury’s egg-shaped elliptical orbit and slow rotation, the Sun appears to rise briefly, set, and rise again from some parts of the planet’s surface. The same happens in reverse at sunset.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/mercury.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/mercury.png"
+        "svg": "/files/images/planets/mercury.svg",
+        "png": "/files/images/planets/mercury.png"
       },
       "searchTags": ["planet", "mercury", "smallest planet"],
       "features": {
@@ -71,8 +71,8 @@
       "resume": "Venus is the second planet from the Sun and Earth’s closest planetary neighbour. Venus has a thick, toxic atmosphere filled with carbon dioxide and is perpetually shrouded in thick, yellowish clouds of sulphuric acid that trap heat, causing a runaway greenhouse effect. It is the hottest planet in our solar system, even though Mercury is closer to the Sun. Venus rotates on its axis backwards compared to most other planets in the solar system. This means that on Venus, the Sun rises in the west and sets in the east.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/venus.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/venus.png"
+        "svg": "/files/images/planets/venus.svg",
+        "png": "/files/images/planets/venus.png"
       },
       "searchTags": ["planet", "venus"],
       "features": {
@@ -102,8 +102,8 @@
       "resume": "Our home planet is the third planet from the Sun, and the only place we know so far that is inhabited by living beings. Although Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on its surface. Just slightly larger than neighbouring Venus, Earth is the largest of the four planets closest to the Sun, all made of rock and metal. The name Earth is at least 1,000 years old. All the planets, except Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the soil”.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/earth.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/earth.png"
+        "svg": "/files/images/planets/earth.svg",
+        "png": "/files/images/planets/earth.png"
       },
       "searchTags": ["planet", "earth"],
       "features": {
@@ -133,8 +133,8 @@
       "resume": "Mars is the fourth planet from the Sun, the second smallest in the Solar System. Named after the Roman god of war, it is often described as the 'Red Planet' because the iron oxide prevalent on its surface gives it a reddish appearance – a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planet with seasons, polar ice caps, canyons, extinct volcanoes and evidence that it was even more active in the past.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/mars.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/mars.png"
+        "svg": "/files/images/planets/mars.svg",
+        "png": "/files/images/planets/mars.png"
       },
       "searchTags": ["planet", "mars"],
       "features": {
@@ -164,8 +164,8 @@
       "resume": "Jupiter has a long history of surprising scientists – ever since 1610, when Galileo Galilei discovered the first moons beyond Earth. This discovery changed the way we see the universe. Fifth in line from the Sun, Jupiter is by far the largest planet in the solar system – more than twice the mass of all the other planets combined. The familiar stripes and swirls of Jupiter are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm, larger than Earth, that has raged for hundreds of years.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/jupiter.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/jupiter.png"
+        "svg": "/files/images/planets/jupiter.svg",
+        "png": "/files/images/planets/jupiter.png"
       },
       "searchTags": ["planet", "jupiter", "largest planet"],
       "features": {
@@ -195,8 +195,8 @@
       "resume": "Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with beautiful rings, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complex as Saturn’s. Like gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/saturn.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/saturn.png"
+        "svg": "/files/images/planets/saturn.svg",
+        "png": "/files/images/planets/saturn.png"
       },
       "searchTags": ["planet", "saturn", "most natural satellites"],
       "features": {
@@ -226,8 +226,8 @@
       "resume": "Uranus is the seventh planet from the Sun and has the third largest diameter in our solar system. It was the first planet discovered with the help of a telescope, in 1781 by astronomer William Herschel, although he originally thought it was a comet or a star. Two years later, the object was universally accepted as a new planet, partly due to observations by astronomer Johann Elert Bode.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/uranus.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/uranus.png"
+        "svg": "/files/images/planets/uranus.svg",
+        "png": "/files/images/planets/uranus.png"
       },
       "searchTags": ["planet", "uranus"],
       "features": {
@@ -257,8 +257,8 @@
       "resume": "Dark, cold, and whipped by supersonic winds, the ice giant Neptune is the eighth and farthest planet in our solar system. More than 30 times farther from the Sun than Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011, Neptune completed its first 165-year orbit since its discovery in 1846. NASA’s Voyager 2 is the only spacecraft to have visited Neptune up close, flying by in 1989 as it exited the solar system.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/neptune.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/neptune.png"
+        "svg": "/files/images/planets/neptune.svg",
+        "png": "/files/images/planets/neptune.png"
       },
       "searchTags": ["planet", "neptune"],
       "features": {
@@ -290,8 +290,8 @@
       "resume": "In 2006, Pluto was reclassified as a dwarf planet. Essentially, the main reason that led the International Astronomical Union (IAU) to remove Pluto from the list of planets is the fact that it is not able to clear its own orbit, meaning it depends on other celestial bodies to influence its path – in this case, Neptune on one side, and various frozen objects from the Kuiper Belt on the other. Pluto – which is smaller than Earth’s Moon – has a heart-shaped glacier the size of Texas and Oklahoma. This fascinating world has blue skies, spinning moons, mountains as tall as the Rockies, and it snows – but the snow is red.",
       "introduction": "",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/pluto.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/pluto.png"
+        "svg": "/files/images/planets/pluto.svg",
+        "png": "/files/images/planets/pluto.png"
       },
       "searchTags": ["planet", "pluto"],
       "features": {
@@ -320,8 +320,8 @@
       "type": "Dwarf Planet",
       "resume": "Haumea is a rapidly rotating dwarf planet located in the Kuiper Belt. It is known for its elongated, egg-like shape and fast rotation period, making it unique among other dwarf planets.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/haumea.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/haumea.png"
+        "svg": "/files/images/planets/haumea.svg",
+        "png": "/files/images/planets/haumea.png"
       },
       "searchTags": ["haumea", "dwarf planet"],
       "features": {
@@ -345,8 +345,8 @@
       "type": "Dwarf Planet",
       "resume": "Makemake is one of the largest known objects in the Kuiper Belt and is notable for being the second-brightest dwarf planet after Pluto. It is covered with methane, ethane, and possibly nitrogen ices.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/makemake.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/makemake.png"
+        "svg": "/files/images/planets/makemake.svg",
+        "png": "/files/images/planets/makemake.png"
       },
       "searchTags": ["makemake", "dwarf planet"],
       "features": {
@@ -370,8 +370,8 @@
       "type": "Dwarf Planet",
       "resume": "Eris is the most massive known dwarf planet in the Solar System and is located in the scattered disk beyond the Kuiper Belt. Its discovery was a key factor in the reclassification of Pluto as a dwarf planet.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/planets/eris.svg",
-        "png": "https://api-solar-system.up.railway.app/files/planets/eris.png"
+        "svg": "/files/images/planets/eris.svg",
+        "png": "/files/images/planets/eris.png"
       },
       "searchTags": ["eris", "dwarf planet"],
       "features": {

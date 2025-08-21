@@ -8,13 +8,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dataPath = path.join(__dirname, "../src/data/data.json");
-const data = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+
+let data;
+try {
+    data = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+} catch (error) {
+    console.error("Error reading data.json:", error);
+    process.exit(1);
+}
 
 const routes = Router()
-
-const handleRequestResponse = (req, res) => {
-
-}
 
 function normalizeInput(input) {
     if (!input) return ''
@@ -50,56 +53,91 @@ routes.get("/", (req, res) => {
 })
 
 //show everything
-routes.get("/all", (req, res) => {
-    res.json(data)
+routes.get("/all", (req, res, next) => {
+    try {
+        res.json(data);
+    } catch (error) {
+        next(error);
+    }
 })
 
 // show the planets
-routes.get("/planets", (req, res) => {
-    res.json(data.planets)
-})
+routes.get("/planets", (req, res, next) => {
+    try {
+        res.json(data.planets);
+    } catch (error) {
+        next(error);
+    }
+});
 
 // show detailed info about a planet by name
-routes.get("/planet{s}/:name", (req, res) => {
-    const { name } = req.params
-    let filtered = data.planets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
-    res.json(filtered)
-    console.log(req.params);
+routes.get("/planet{s}/:name", (req, res, next) => {
+    try {
+        const { name } = req.params
+        let filteredPlanet = data.planets.filter((p) => normalizeInput(p.name) === normalizeInput(name))
+        if (filteredPlanet.length === 0) res.status(404).json({ message: `Planet '${req.params.name}' not found.` });
+        res.json(filteredPlanet)
+
+    } catch(error) {
+        next(error)
+    }
+  
 })
 
 //show dwarf planets
-routes.get("/dwarf-planets", (req, res) => {
-   
-    res.json(data.dwarfPlanets)
+routes.get("/dwarf-planets", (req, res, next) => {
+    try {
+        res.json(data.dwarfPlanets);
+    } catch (error) {
+        next(error);
+    }
 
 })
 
 // show detailed info about a dwarf planet by name
-routes.get("/dwarf-planet{s}/:name", (req, res) => {
-    const { name } = req.params
-    let filtered = data.dwarfPlanets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
-    res.json(filtered)
+routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
+    try{
+     const { name } = req.params
+    let filteredDwarfPlanet = data.dwarfPlanets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
+    if (filteredDwarfPlanet.length === 0) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
+    res.json(filteredDwarfPlanet)
+    } catch (error) {
+        next(error)
+    }
+   
 })
 
 // show planets + dwarf planets in the same list
-routes.get("/planets-and-dwarfs", (req, res) => {
-    let mergedPlanetsAndDwarfPlanets = [...data.planets, ...data.dwarfPlanets]
-    res.json(mergedPlanetsAndDwarfPlanets)
+routes.get("/planets-and-dwarfs", (req, res, next) => {
+     try {
+        res.json([...data.planets, ...data.dwarfPlanets]);
+    } catch (error) {
+        next(error);
+    }
     
 })
 
 // show asteroids
-routes.get("/asteroids", (req, res) => {
-    res.json(data.asteroids)
+routes.get("/asteroids", (req, res, next) => {
+    try {
+        res.json(data.asteroids);
+    } catch (error) {
+        next(error);
+    }
 })
 
 // show galaxies
-routes.get("/galaxies", (req, res) => {
-    res.json(data.galaxies)
+routes.get("/galaxies", (req, res, next) => {
+    try {
+        res.json(data.galaxies);
+    } catch (error) {
+        next(error);
+    }
 })
 
 // /find/:string search for objects containing the specified string in their tags
-routes.get("/find/:tag", (req, res)=> {
+routes.get("/find/:tag", (req, res, next)=> {
+    try {
    const { tag } = req.params;
     const normalizedTag = normalizeInput(tag);
     const results = {};
@@ -114,8 +152,21 @@ routes.get("/find/:tag", (req, res)=> {
         }
     }
 
+    if (Object.keys(results).length === 0) {
+            return res.status(404).json({ message: `No objects found for tag '${req.params.tag}'.` });
+    }
     res.json(results);
+    } catch (error) {
+        next(error)
+    }
 })
+
+// Global middleware 
+routes.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ message: "Something went wrong on the server.", error: err.message });
+});
+
 
 
 export default routes

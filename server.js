@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(routes)
-app.use('/files/planets', express.static(path.resolve(__dirname, 'public', 'images', 'planets')));
+app.use('/files/', express.static(path.resolve(__dirname, 'public', 'images')));
 
 
 app.listen(PORT, () => {
