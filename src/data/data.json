@@ -1,5 +1,5 @@
 {
-  "planets": [
+   "stars": [
     {
       "id": "0",
       "name": "Sun",
@@ -19,12 +19,20 @@
         "Diameter": "1,392,700 km",
         "sunDistance": "0 km",
         "oneWayLightToTheSun": "",
-        "satellites": { "number": 0, "names": ["225088 Gonggong", "3122 Florence"] },
+        "satellites": { "number": 0, "names": [] },
         "temperature": "5,505°C",
         "gravity": "274 m/s²"
       },
+      "atmosphere": ["Hydrogen", "Helium"],
+      "discovery": { "year": "", "by": "" },
+      "curiosities": [
+        "The Sun accounts for 99.8% of the total mass of the Solar System.",
+        "Every second, the Sun converts about 600 million tons of hydrogen into helium."
+      ],
       "geography": ""
-    },
+    }
+   ],
+  "planets": [
     {
       "id": "1",
       "name": "Mercury",
@@ -48,6 +56,12 @@
         "temperature": "167°C",
         "gravity": "3.7 m/s²"
       },
+      "atmosphere": ["Oxygen", "Sodium", "Hydrogen", "Helium", "Potassium"],
+      "discovery": { "year": "antiquity", "by": "Babylonian/Egyptian astronomers" },
+      "curiosities": [
+        "A day on Mercury lasts 176 Earth days.",
+        "Despite being closest to the Sun, it is not the hottest planet in the Solar System."
+      ],
       "geography": ""
     },
     {
@@ -73,6 +87,12 @@
         "temperature": "461°C",
         "gravity": "8.87 m/s²"
       },
+      "atmosphere": ["Carbon dioxide (96%)", "Nitrogen (3%)", "Sulphur dioxide"],
+      "discovery": { "year": "antiquity", "by": "Babylonian/Mayan astronomers" },
+      "curiosities": [
+        "A day on Venus is longer than a Venusian year.",
+        "Venus rotates in a retrograde direction, meaning the Sun rises in the west and sets in the east."
+      ],
       "geography": ""
     },
     {
@@ -98,6 +118,12 @@
         "oneWayLightToTheSun": "8.36 min",
         "gravity": "9.807 m/s²"
       },
+      "atmosphere": ["Nitrogen (78%)", "Oxygen (21%)", "Argon", "Carbon dioxide"],
+      "discovery": { "year": "", "by": "" },
+      "curiosities": [
+        "Earth is the only known planet to support life.",
+        "About 70% of Earth's surface is covered by water."
+      ],
       "geography": ""
     },
     {
@@ -123,6 +149,12 @@
         "temperature": "-63°C",
         "gravity": "3.721 m/s²"
       },
+      "atmosphere": ["Carbon dioxide (95%)", "Nitrogen (2.7%)", "Argon (1.6%)"],
+      "discovery": { "year": "antiquity", "by": "Egyptian and Babylonian astronomers" },
+      "curiosities": [
+        "Mars has the largest volcano in the Solar System, Olympus Mons.",
+        "It has two small moons: Phobos and Deimos."
+      ],
       "geography": ""
     },
     {
@@ -148,6 +180,12 @@
         "temperature": "-108°C",
         "gravity": "24.79 m/s²"
       },
+      "atmosphere": ["Hydrogen", "Helium", "Ammonia", "Methane"],
+      "discovery": { "year": "antiquity", "by": "ancient civilizations" },
+      "curiosities": [
+        "The Great Red Spot is a storm that has lasted for at least 350 years.",
+        "It is the most massive planet in the Solar System, with more than 75 confirmed moons."
+      ],
       "geography": ""
     },
     {
@@ -173,6 +211,12 @@
         "temperature": "-139°C",
         "gravity": "10.44 m/s²"
       },
+      "atmosphere": ["Hydrogen", "Helium", "Methane", "Ammonia"],
+      "discovery": { "year": "antiquity", "by": "ancient civilizations" },
+      "curiosities": [
+        "Saturn has the largest ring system in the Solar System.",
+        "Its density is so low that it would float in a giant ocean of water."
+      ],
       "geography": ""
     },
     {
@@ -198,6 +242,12 @@
         "temperature": "-200°C",
         "gravity": "8.87 m/s²"
       },
+      "atmosphere": ["Hydrogen", "Helium", "Methane"],
+      "discovery": { "year": "1781", "by": "William Herschel" },
+      "curiosities": [
+        "Uranus rotates almost on its side, with an axial tilt of 98°.",
+        "Its seasons last about 21 years each."
+      ],
       "geography": ""
     },
     {
@@ -223,6 +273,12 @@
         "temperature": "-218°C",
         "gravity": "11.15 m/s²"
       },
+      "atmosphere": ["Hydrogen", "Helium", "Methane"],
+      "discovery": { "year": "1846", "by": "Urbain Le Verrier and Johann Galle" },
+      "curiosities": [
+        "Neptune has the fastest winds in the Solar System, reaching up to 2,100 km/h.",
+        "It was the first planet discovered by mathematical calculations before being observed."
+      ],
       "geography": ""
     },
     {
@@ -248,10 +304,140 @@
         "temperature": "",
         "gravity": "0.62 m/s²"
       },
+      "atmosphere": ["Nitrogen", "Methane", "Carbon monoxide"],
+      "discovery": { "year": "1930", "by": "Clyde Tombaugh" },
+      "curiosities": [
+        "Pluto has a moon, Charon, almost the same size as itself.",
+        "Its orbit is so tilted that sometimes it is closer to the Sun than Neptune."
+      ],
       "geography": ""
     }
   ],
-  "asteroids": [],
-  "galaxies": [],
-  "stars": []
+  "asteroids": [
+    {
+      "id": "1",
+      "name": "Ceres",
+      "type": "Asteroid/Dwarf Planet",
+      "resume": "Ceres is the largest object in the asteroid belt between Mars and Jupiter and is classified as both an asteroid and a dwarf planet. It contains about a third of the mass of the entire asteroid belt.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/asteroids/ceres.svg",
+        "png": "https://api-solar-system.up.railway.app/files/asteroids/ceres.png"
+      },
+      "searchTags": ["asteroid", "ceres", "dwarf planet", "asteroid belt"],
+      "features": {
+        "diameter": "939 km",
+        "orbitalPeriod": "4.6 years",
+        "rotationDuration": "9h 4min",
+        "meanDistanceFromSun": "413,700,000 km",
+        "gravity": "0.27 m/s²"
+      },
+      "atmosphere": [],
+      "discovery": { "year": "1801", "by": "Giuseppe Piazzi" },
+      "curiosities": [
+        "Ceres was the first asteroid to be discovered.",
+        "It has been visited by NASA's Dawn spacecraft."
+      ],
+      "geography": "Ceres has a rocky core and an icy mantle, and may have a subsurface ocean of liquid water."
+    },
+    {
+      "id": "2",
+      "name": "Vesta",
+      "type": "Asteroid",
+      "resume": "Vesta is one of the largest asteroids in the asteroid belt and is known for its bright surface and differentiated structure.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/asteroids/vesta.svg",
+        "png": "https://api-solar-system.up.railway.app/files/asteroids/vesta.png"
+      },
+      "searchTags": ["asteroid", "vesta", "asteroid belt"],
+      "features": {
+        "diameter": "525 km",
+        "orbitalPeriod": "3.6 years",
+        "rotationDuration": "5h 20min",
+        "meanDistanceFromSun": "353,400,000 km",
+        "gravity": "0.25 m/s²"
+      },
+      "atmosphere": [],
+      "discovery": { "year": "1807", "by": "Heinrich Wilhelm Olbers" },
+      "curiosities": [
+        "Vesta has a differentiated structure with core, mantle, and crust.",
+        "It is the brightest asteroid visible from Earth."
+      ],
+      "geography": "Vesta's surface features include large impact basins and a variety of terrains."
+    },
+    {
+      "id": "3",
+      "name": "Eros",
+      "type": "Asteroid",
+      "resume": "Eros is a near-Earth asteroid and one of the first to be studied by a spacecraft. It has an elongated, irregular shape.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/asteroids/eros.svg",
+        "png": "https://api-solar-system.up.railway.app/files/asteroids/eros.png"
+      },
+      "searchTags": ["asteroid", "eros", "near-earth asteroid"],
+      "features": {
+        "dimensions": "34.4 × 11.2 × 11.2 km",
+        "orbitalPeriod": "1.76 years",
+        "rotationDuration": "5h 16min",
+        "meanDistanceFromSun": "218,000,000 km",
+        "gravity": "0.0059 m/s²"
+      },
+      "atmosphere": [],
+      "discovery": { "year": "1898", "by": "Carl Gustav Witt" },
+      "curiosities": [
+        "Eros was the first asteroid orbited by a spacecraft (NEAR Shoemaker).",
+        "It is a potential resource for future space mining."
+      ],
+      "geography": "Eros has a heavily cratered surface and an elongated, peanut-like shape."
+    }
+  ],
+  "galaxies": [
+    {
+      "id": "1",
+      "name": "Milky Way",
+      "type": "Galaxy",
+      "resume": "The Milky Way is the galaxy that contains our Solar System, appearing as a hazy band of light in the night sky from Earth.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/galaxies/milkyway.svg",
+        "png": "https://api-solar-system.up.railway.app/files/galaxies/milkyway.png"
+      },
+      "searchTags": ["galaxy", "milky way", "home galaxy"],
+      "features": {
+        "type": "Barred Spiral",
+        "diameter": "100,000–200,000 light-years",
+        "estimatedStars": "100–400 billion",
+        "distanceFromEarth": "0 light-years"
+      },
+      "atmosphere": [],
+      "discovery": { "year": "antiquity", "by": "various civilizations" },
+      "curiosities": [
+        "Our galaxy is a barred spiral galaxy.",
+        "It contains an estimated 100–400 billion stars."
+      ],
+      "geography": "The Milky Way has several spiral arms and a central bulge containing a supermassive black hole."
+    },
+    {
+      "id": "2",
+      "name": "Andromeda",
+      "type": "Galaxy",
+      "resume": "The Andromeda Galaxy is the nearest spiral galaxy to the Milky Way and is expected to collide with it in about 4.5 billion years.",
+      "images": {
+        "svg": "https://api-solar-system.up.railway.app/files/galaxies/andromeda.svg",
+        "png": "https://api-solar-system.up.railway.app/files/galaxies/andromeda.png"
+      },
+      "searchTags": ["galaxy", "andromeda", "spiral galaxy"],
+      "features": {
+        "type": "Spiral",
+        "diameter": "220,000 light-years",
+        "estimatedStars": "1 trillion",
+        "distanceFromEarth": "2.537 million light-years"
+      },
+      "atmosphere": [],
+      "discovery": { "year": "964", "by": "Abd al-Rahman al-Sufi (known since antiquity)" },
+      "curiosities": [
+        "Andromeda is on a collision course with the Milky Way.",
+        "It is visible to the naked eye from Earth."
+      ],
+      "geography": "Andromeda contains hundreds of billions of stars and many satellite galaxies."
+    }
+  ]
 }
