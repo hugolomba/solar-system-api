@@ -74,8 +74,8 @@ routes.get("/planets", (req, res, next) => {
 routes.get("/planet{s}/:name", (req, res, next) => {
     try {
         const { name } = req.params
-        let filteredPlanet = data.planets.filter((p) => normalizeInput(p.name) === normalizeInput(name))
-        if (filteredPlanet.length === 0) res.status(404).json({ message: `Planet '${req.params.name}' not found.` });
+        let filteredPlanet = data.planets.find((p) => normalizeInput(p.name) === normalizeInput(name))
+        if (!filteredPlanet) res.status(404).json({ message: `Planet '${req.params.name}' not found.` });
         res.json(filteredPlanet)
 
     } catch(error) {
@@ -98,13 +98,26 @@ routes.get("/dwarf-planets", (req, res, next) => {
 routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
     try{
      const { name } = req.params
-    let filteredDwarfPlanet = data.dwarfPlanets.filter((p) => p.name.toLowerCase() === normalizeInput(name))
-    if (filteredDwarfPlanet.length === 0) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
+    let filteredDwarfPlanet = data.dwarfPlanets.find((p) => normalizeInput(p.name) === normalizeInput(name))
+    if (!filteredDwarfPlanet) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
     res.json(filteredDwarfPlanet)
     } catch (error) {
         next(error)
     }
    
+})
+
+// show detailed info about a dwarf planet by name
+routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
+    try{
+     const { name } = req.params
+    let filteredDwarfPlanet = data.dwarfPlanets.find((p) => normalizeInput(p.name) === normalizeInput(name))
+    if (!filteredDwarfPlanet) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
+    res.json(filteredDwarfPlanet)
+    } catch (error) {
+        next(error)
+    }
+
 })
 
 // show planets + dwarf planets in the same list
