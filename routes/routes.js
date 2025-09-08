@@ -19,6 +19,20 @@ try {
 
 const routes = Router()
 
+const BASE_URL = process.env.BASE_URL || `http://localhost:${process.env.PORT || 3000}`
+
+function withFullImageUrls(item) {
+    if (!item.images) return item;
+
+    return {
+        ...item,
+        images: {
+            svg: item.images.svg.startsWith("http") ? item.images.svg : `${BASE_URL}${item.images.svg}`,
+            png: item.images.png.startsWith("http") ? item.images.png : `${BASE_URL}${item.images.png}`
+        }
+    };
+}
+
 function normalizeInput(input) {
     if (!input) return ''
     return input
@@ -55,7 +69,13 @@ routes.get("/", (req, res) => {
 //show everything
 routes.get("/all", (req, res, next) => {
     try {
-        res.json(data);
+        const allDataWithUrls = {
+            planets: data.planets.map(withFullImageUrls),
+            dwarfPlanets: data.dwarfPlanets.map(withFullImageUrls),
+            asteroids: data.asteroids.map(withFullImageUrls),
+            galaxies: data.galaxies.map(withFullImageUrls)
+        };
+        res.json(allDataWithUrls);
     } catch (error) {
         next(error);
     }
@@ -64,7 +84,7 @@ routes.get("/all", (req, res, next) => {
 // show the planets
 routes.get("/planets", (req, res, next) => {
     try {
-        res.json(data.planets);
+        res.json(data.planets.map(withFullImageUrls));
     } catch (error) {
         next(error);
     }
@@ -76,7 +96,7 @@ routes.get("/planet{s}/:name", (req, res, next) => {
         const { name } = req.params
         let filteredPlanet = data.planets.find((p) => normalizeInput(p.name) === normalizeInput(name))
         if (!filteredPlanet) res.status(404).json({ message: `Planet '${req.params.name}' not found.` });
-        res.json(filteredPlanet)
+        res.json(withFullImageUrls(filteredPlanet))
 
     } catch(error) {
         next(error)
@@ -87,7 +107,7 @@ routes.get("/planet{s}/:name", (req, res, next) => {
 //show dwarf planets
 routes.get("/dwarf-planets", (req, res, next) => {
     try {
-        res.json(data.dwarfPlanets);
+        res.json(data.dwarfPlanets.map(withFullImageUrls));
     } catch (error) {
         next(error);
     }
@@ -100,7 +120,7 @@ routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
      const { name } = req.params
     let filteredDwarfPlanet = data.dwarfPlanets.find((p) => normalizeInput(p.name) === normalizeInput(name))
     if (!filteredDwarfPlanet) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
-    res.json(filteredDwarfPlanet)
+    res.json(withFullImageUrls(filteredDwarfPlanet))
     } catch (error) {
         next(error)
     }
@@ -113,7 +133,7 @@ routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
      const { name } = req.params
     let filteredDwarfPlanet = data.dwarfPlanets.find((p) => normalizeInput(p.name) === normalizeInput(name))
     if (!filteredDwarfPlanet) res.status(404).json({ message: `Dwarf planet '${req.params.name}' not found.`})
-    res.json(filteredDwarfPlanet)
+    res.json(withFullImageUrls(filteredDwarfPlanet))
     } catch (error) {
         next(error)
     }
@@ -123,7 +143,7 @@ routes.get("/dwarf-planet{s}/:name", (req, res, next) => {
 // show planets + dwarf planets in the same list
 routes.get("/planets-and-dwarfs", (req, res, next) => {
      try {
-        res.json([...data.planets, ...data.dwarfPlanets]);
+        res.json([...data.planets, ...data.dwarfPlanets].map(withFullImageUrls));
     } catch (error) {
         next(error);
     }
@@ -133,7 +153,7 @@ routes.get("/planets-and-dwarfs", (req, res, next) => {
 // show asteroids
 routes.get("/asteroids", (req, res, next) => {
     try {
-        res.json(data.asteroids);
+        res.json(data.asteroids.map(withFullImageUrls));
     } catch (error) {
         next(error);
     }
@@ -142,7 +162,7 @@ routes.get("/asteroids", (req, res, next) => {
 // show galaxies
 routes.get("/galaxies", (req, res, next) => {
     try {
-        res.json(data.galaxies);
+        res.json(data.galaxies.map(withFullImageUrls));
     } catch (error) {
         next(error);
     }
@@ -161,7 +181,7 @@ routes.get("/find/:tag", (req, res, next)=> {
         );
 
         if (filteredItems.length > 0) {
-            results[category] = filteredItems;
+            results[category] = filteredItems.map(withFullImageUrls);
         }
     }
 
