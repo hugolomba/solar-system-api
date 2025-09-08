@@ -7,8 +7,7 @@
       "resume": "Our Sun is a 4.5 billion-year-old star – a hot, glowing ball of hydrogen and helium at the centre of our solar system. Without its energy, life as we know it could not exist here on our home planet. The Sun is the largest object in our solar system. About 1.3 million Earths would be needed to fill the Sun’s volume. Its gravity holds the solar system together, keeping everything from the largest planets to the smallest pieces of debris in orbit around it. The hottest part of the Sun is its core, where temperatures reach 15 million degrees Celsius. The Sun’s activity, from its powerful eruptions to the constant flow of charged particles it sends, influences the nature of space throughout the solar system.",
       "introduction": "",
       "images": {
-        "svg": "/files/images/planets/sun.svg",
-        "png": "/files/images/planets/sun.png"
+        "png": "/files/images/stars/sun.png"
       },
       "searchTags": ["planet", "sun", "central star"],
       "features": {
@@ -290,8 +289,7 @@
       "resume": "In 2006, Pluto was reclassified as a dwarf planet. Essentially, the main reason that led the International Astronomical Union (IAU) to remove Pluto from the list of planets is the fact that it is not able to clear its own orbit, meaning it depends on other celestial bodies to influence its path – in this case, Neptune on one side, and various frozen objects from the Kuiper Belt on the other. Pluto – which is smaller than Earth’s Moon – has a heart-shaped glacier the size of Texas and Oklahoma. This fascinating world has blue skies, spinning moons, mountains as tall as the Rockies, and it snows – but the snow is red.",
       "introduction": "",
       "images": {
-        "svg": "/files/images/planets/pluto.svg",
-        "png": "/files/images/planets/pluto.png"
+        "png": "/files/images/dwarfPlanets/pluto.png"
       },
       "searchTags": ["planet", "pluto"],
       "features": {
@@ -320,8 +318,7 @@
       "type": "Dwarf Planet",
       "resume": "Haumea is a rapidly rotating dwarf planet located in the Kuiper Belt. It is known for its elongated, egg-like shape and fast rotation period, making it unique among other dwarf planets.",
       "images": {
-        "svg": "/files/images/planets/haumea.svg",
-        "png": "/files/images/planets/haumea.png"
+        "png": "/files/images/dwarfPlanets/haumea.png"
       },
       "searchTags": ["haumea", "dwarf planet"],
       "features": {
@@ -345,8 +342,7 @@
       "type": "Dwarf Planet",
       "resume": "Makemake is one of the largest known objects in the Kuiper Belt and is notable for being the second-brightest dwarf planet after Pluto. It is covered with methane, ethane, and possibly nitrogen ices.",
       "images": {
-        "svg": "/files/images/planets/makemake.svg",
-        "png": "/files/images/planets/makemake.png"
+        "png": "/files/images/dwarfPlanets/makemake.png"
       },
       "searchTags": ["makemake", "dwarf planet"],
       "features": {
@@ -370,8 +366,7 @@
       "type": "Dwarf Planet",
       "resume": "Eris is the most massive known dwarf planet in the Solar System and is located in the scattered disk beyond the Kuiper Belt. Its discovery was a key factor in the reclassification of Pluto as a dwarf planet.",
       "images": {
-        "svg": "/files/images/planets/eris.svg",
-        "png": "/files/images/planets/eris.png"
+        "png": "/files/images/dwarfPlanets/eris.png"
       },
       "searchTags": ["eris", "dwarf planet"],
       "features": {
@@ -397,8 +392,7 @@
       "type": "Asteroid/Dwarf Planet",
       "resume": "Ceres is the largest object in the asteroid belt between Mars and Jupiter and is classified as both an asteroid and a dwarf planet. It contains about a third of the mass of the entire asteroid belt.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/asteroids/ceres.svg",
-        "png": "https://api-solar-system.up.railway.app/files/asteroids/ceres.png"
+        "png": "/files/images/asteroids/ceres.png"
       },
       "searchTags": ["asteroid", "ceres", "dwarf planet", "asteroid belt"],
       "features": {
@@ -422,8 +416,7 @@
       "type": "Asteroid",
       "resume": "Vesta is one of the largest asteroids in the asteroid belt and is known for its bright surface and differentiated structure.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/asteroids/vesta.svg",
-        "png": "https://api-solar-system.up.railway.app/files/asteroids/vesta.png"
+        "png": "/files/images/asteroids/vesta.png"
       },
       "searchTags": ["asteroid", "vesta", "asteroid belt"],
       "features": {
@@ -447,8 +440,7 @@
       "type": "Asteroid",
       "resume": "Eros is a near-Earth asteroid and one of the first to be studied by a spacecraft. It has an elongated, irregular shape.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/asteroids/eros.svg",
-        "png": "https://api-solar-system.up.railway.app/files/asteroids/eros.png"
+        "png": "/files/images/asteroids/eros.png"
       },
       "searchTags": ["asteroid", "eros", "near-earth asteroid"],
       "features": {
@@ -474,8 +466,7 @@
       "type": "Galaxy",
       "resume": "The Milky Way is the galaxy that contains our Solar System, appearing as a hazy band of light in the night sky from Earth.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/galaxies/milkyway.svg",
-        "png": "https://api-solar-system.up.railway.app/files/galaxies/milkyway.png"
+        "png": "/files/images/galaxies/milkyWay.png"
       },
       "searchTags": ["galaxy", "milky way", "home galaxy"],
       "features": {
@@ -498,8 +489,7 @@
       "type": "Galaxy",
       "resume": "The Andromeda Galaxy is the nearest spiral galaxy to the Milky Way and is expected to collide with it in about 4.5 billion years.",
       "images": {
-        "svg": "https://api-solar-system.up.railway.app/files/galaxies/andromeda.svg",
-        "png": "https://api-solar-system.up.railway.app/files/galaxies/andromeda.png"
+        "png": "/files/images/galaxies/andromeda.png"
       },
       "searchTags": ["galaxy", "andromeda", "spiral galaxy"],
       "features": {

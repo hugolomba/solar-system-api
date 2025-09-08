@@ -27,7 +27,6 @@ function withFullImageUrls(item) {
     return {
         ...item,
         images: {
-            svg: item.images.svg.startsWith("http") ? item.images.svg : `${BASE_URL}${item.images.svg}`,
             png: item.images.png.startsWith("http") ? item.images.png : `${BASE_URL}${item.images.png}`
         }
     };
