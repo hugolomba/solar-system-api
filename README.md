@@ -35,6 +35,8 @@ By default, the API runs on **http://localhost:3000**
 - `GET /all` → Retrieve the complete dataset  
 - `GET /planets` → List all planets  
 - `GET /planets/:name` → Get detailed information about a specific planet  
+- `GET /stars/` → Get all the stars
+- `GET /stars/:name` → Get detailed information about a specific star  
 - `GET /dwarf-planets` → List all dwarf planets  
 - `GET /dwarf-planets/:name` → Get detailed information about a specific dwarf planet  
 - `GET /planets-and-dwarfs` → List all planets and dwarf planets together  

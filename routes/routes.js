@@ -70,6 +70,7 @@ routes.get("/", (req, res) => {
 routes.get("/all", (req, res, next) => {
     try {
         const allDataWithUrls = {
+            stars: data.stars.map(withFullImageUrls),
             planets: data.planets.map(withFullImageUrls),
             dwarfPlanets: data.dwarfPlanets.map(withFullImageUrls),
             asteroids: data.asteroids.map(withFullImageUrls),
@@ -80,6 +81,28 @@ routes.get("/all", (req, res, next) => {
         next(error);
     }
 })
+
+//show the stars
+routes.get("/stars", (req, res, next) => {
+    try {
+        res.json(data.stars.map(withFullImageUrls));
+    } catch (error) {
+        next(error);
+    }
+});
+
+// show detailed info about a star by name
+routes.get("/star{s}/:name", (req, res, next) => {
+    try {
+        const { name } = req.params
+        let filteredStar = data.stars.find((s) => normalizeInput(s.name) === normalizeInput(name))
+        if (!filteredStar) res.status(404).json({ message: `Star '${req.params.name}' not found.` });
+        res.json(withFullImageUrls(filteredStar))
+
+    } catch(error) {
+        next(error)
+    }
+});
 
 // show the planets
 routes.get("/planets", (req, res, next) => {
